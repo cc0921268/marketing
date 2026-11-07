@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marketing-os.local/skills/consumer-insight-skill/schema.json",
+  "title": "Consumer Insight Skill 输出规范 v0.2",
+  "description": "单条消费者评论的语义提取结果。字段值必须来自原评论或显式 null/unknown，严禁编造。",
+  "type": "object",
+  "required": [
+    "review_id",
+    "sentiment",
+    "need",
+    "pain_point",
+    "scenario",
+    "purchase_barrier",
+    "evidence",
+    "confidence",
+    "refuse",
+    "refuse_reason",
+    "unjudged_fields"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "review_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "原样回传输入的评论 ID，禁止修改"
+    },
+    "sentiment": {
+      "type": "string",
+      "enum": ["positive", "negative", "neutral", "mixed", "unknown"],
+      "description": "评论整体情绪；无法判断时为 unknown"
+    },
+    "need": {
+      "type": ["string", "null"],
+      "description": "评论中表达的消费者需求；无依据时为 null"
+    },
+    "pain_point": {
+      "type": ["string", "null"],
+      "description": "评论中抱怨或不满的具体问题点；无依据时为 null"
+    },
+    "scenario": {
+      "type": ["string", "null"],
+      "description": "消费场景（何时/何地/何情境）；评论未提时为 null"
+    },
+    "purchase_barrier": {
+      "type": ["string", "null"],
+      "description": "阻碍购买的因素；评论未提时为 null"
+    },
+    "evidence": {
+      "type": "array",
+      "description": "证据数组；每个非 null 的判断字段至少对应 1 条逐字摘录",
+      "items": {
+        "type": "object",
+        "required": ["quote", "field"],
+        "additionalProperties": false,
+        "properties": {
+          "quote": {
+            "type": "string",
+            "minLength": 1,
+            "description": "原评论的逐字摘录，禁止改写"
+          },
+          "field": {
+            "type": "string",
+            "enum": [
+              "sentiment",
+              "need",
+              "pain_point",
+              "scenario",
+              "purchase_barrier"
+            ],
+            "description": "该证据支撑的判断字段"
+          }
+        }
+      }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "本次提取的置信度：全部判断有明确原文依据为 high；含弱推断为 medium；多数字段 unknown 为 low"
+    },
+    "refuse": {
+      "type": "boolean",
+      "description": "是否拒答（噪音/广告/无关内容/空文本）"
+    },
+    "refuse_reason": {
+      "type": ["string", "null"],
+      "description": "拒答原因；refuse=false 时必须为 null，refuse=true 时必填"
+    },
+    "unjudged_fields": {
+      "type": "array",
+      "description": "因信息不足而无法判断的字段名列表",
+      "items": {
+        "type": "string",
+        "enum": ["sentiment", "need", "pain_point", "scenario", "purchase_barrier"]
+      },
+      "uniqueItems": true
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "refuse": { "const": true } } },
+      "then": {
+        "properties": {
+          "refuse_reason": { "type": "string", "minLength": 2 },
+          "sentiment": { "const": "unknown" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "refuse": { "const": false } } },
+      "then": {
+        "properties": {
+          "refuse_reason": { "type": "null" }
+        }
+      }
+    }
+  ]
+}

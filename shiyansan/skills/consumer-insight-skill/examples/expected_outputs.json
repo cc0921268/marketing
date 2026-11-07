@@ -1,0 +1,169 @@
+[
+  {
+    "review_id": "R001",
+    "sentiment": "positive",
+    "need": "口感冰爽不腻、能提神的饮品",
+    "pain_point": null,
+    "scenario": "上班路上",
+    "purchase_barrier": null,
+    "evidence": [
+      { "quote": "椰云拿铁真的绝，冰爽不腻", "field": "need" },
+      { "quote": "上班路上来一杯很提神", "field": "scenario" },
+      { "quote": "真的绝，冰爽不腻", "field": "sentiment" }
+    ],
+    "confidence": "high",
+    "refuse": false,
+    "refuse_reason": null,
+    "unjudged_fields": ["pain_point", "purchase_barrier"]
+  },
+  {
+    "review_id": "R002",
+    "sentiment": "negative",
+    "need": null,
+    "pain_point": "产品变甜口感变差，且出餐等待时间过长",
+    "scenario": null,
+    "purchase_barrier": null,
+    "evidence": [
+      { "quote": "这次比上次甜好多，齁得慌", "field": "pain_point" },
+      { "quote": "等了25分钟才做好，太慢了", "field": "pain_point" },
+      { "quote": "齁得慌", "field": "sentiment" }
+    ],
+    "confidence": "high",
+    "refuse": false,
+    "refuse_reason": null,
+    "unjudged_fields": ["need", "scenario", "purchase_barrier"]
+  },
+  {
+    "review_id": "R003",
+    "sentiment": "neutral",
+    "need": null,
+    "pain_point": "高铁站门店价格高于市区门店",
+    "scenario": "高铁站",
+    "purchase_barrier": "同款产品在渠道间存在价差",
+    "evidence": [
+      { "quote": "在高铁站店买了一杯美式", "field": "scenario" },
+      { "quote": "价格比市区贵5块", "field": "pain_point" },
+      { "quote": "价格比市区贵5块", "field": "purchase_barrier" },
+      { "quote": "在高铁站店买了一杯美式", "field": "sentiment" }
+    ],
+    "confidence": "medium",
+    "refuse": false,
+    "refuse_reason": null,
+    "unjudged_fields": ["need"]
+  },
+  {
+    "review_id": "R004",
+    "sentiment": "mixed",
+    "need": "奶香味足、外观精致的产品",
+    "pain_point": "纸质杯身漏液影响使用",
+    "scenario": null,
+    "purchase_barrier": null,
+    "evidence": [
+      { "quote": "拿铁奶香味很足，拉花也好看", "field": "need" },
+      { "quote": "杯子是纸的，喝到一半就漏了", "field": "pain_point" },
+      { "quote": "拿铁奶香味很足", "field": "sentiment" },
+      { "quote": "喝到一半就漏了", "field": "sentiment" }
+    ],
+    "confidence": "high",
+    "refuse": false,
+    "refuse_reason": null,
+    "unjudged_fields": ["scenario", "purchase_barrier"]
+  },
+  {
+    "review_id": "R005",
+    "sentiment": "unknown",
+    "need": null,
+    "pain_point": null,
+    "scenario": null,
+    "purchase_barrier": null,
+    "evidence": [],
+    "confidence": "low",
+    "refuse": true,
+    "refuse_reason": "无有效文本内容",
+    "unjudged_fields": ["sentiment", "need", "pain_point", "scenario", "purchase_barrier"]
+  },
+  {
+    "review_id": "R006",
+    "sentiment": "positive",
+    "need": "适合减脂期、负担小的燕麦拿铁",
+    "pain_point": "门店网点不足，居住地附近没有门店",
+    "scenario": "减脂期日常饮用",
+    "purchase_barrier": "门店距离远导致购买不便",
+    "evidence": [
+      { "quote": "喜欢他们家的燕麦拿铁，减脂期喝没有负担", "field": "need" },
+      { "quote": "减脂期喝没有负担", "field": "scenario" },
+      { "quote": "希望多开店，我家附近没有", "field": "pain_point" },
+      { "quote": "我家附近没有", "field": "purchase_barrier" },
+      { "quote": "喜欢他们家的燕麦拿铁", "field": "sentiment" }
+    ],
+    "confidence": "high",
+    "refuse": false,
+    "refuse_reason": null,
+    "unjudged_fields": []
+  },
+  {
+    "review_id": "R007",
+    "sentiment": "negative",
+    "need": null,
+    "pain_point": "客服承诺补发后未跟进，响应失信",
+    "scenario": null,
+    "purchase_barrier": "售后不可靠削弱复购意愿",
+    "evidence": [
+      { "quote": "客服说漏发会补，结果一周都没消息", "field": "pain_point" },
+      { "quote": "结果一周都没消息", "field": "sentiment" },
+      { "quote": "客服说漏发会补，结果一周都没消息", "field": "purchase_barrier" }
+    ],
+    "confidence": "medium",
+    "refuse": false,
+    "refuse_reason": null,
+    "unjudged_fields": ["need", "scenario"]
+  },
+  {
+    "review_id": "R008",
+    "sentiment": "neutral",
+    "need": null,
+    "pain_point": null,
+    "scenario": null,
+    "purchase_barrier": null,
+    "evidence": [
+      { "quote": "就是把咖啡因放进水里，喝了", "field": "sentiment" }
+    ],
+    "confidence": "low",
+    "refuse": false,
+    "refuse_reason": null,
+    "unjudged_fields": ["need", "pain_point", "scenario", "purchase_barrier"]
+  },
+  {
+    "review_id": "R009",
+    "sentiment": "unknown",
+    "need": null,
+    "pain_point": null,
+    "scenario": null,
+    "purchase_barrier": null,
+    "evidence": [],
+    "confidence": "low",
+    "refuse": true,
+    "refuse_reason": "广告或推销内容",
+    "unjudged_fields": ["sentiment", "need", "pain_point", "scenario", "purchase_barrier"]
+  },
+  {
+    "review_id": "R010",
+    "sentiment": "mixed",
+    "need": "适合多人分享的大份量产品",
+    "pain_point": "外卖配送中饮品洒漏，到手份量减少",
+    "scenario": "外卖场景，两人分食",
+    "purchase_barrier": "配送质量差影响到手体验",
+    "evidence": [
+      { "quote": "份量挺大，两个人分着喝刚好", "field": "need" },
+      { "quote": "两个人分着喝", "field": "scenario" },
+      { "quote": "外卖配送路上洒了一半，到手只剩三分之二", "field": "pain_point" },
+      { "quote": "外卖配送路上洒了一半", "field": "purchase_barrier" },
+      { "quote": "份量挺大", "field": "sentiment" },
+      { "quote": "到手只剩三分之二", "field": "sentiment" }
+    ],
+    "confidence": "high",
+    "refuse": false,
+    "refuse_reason": null,
+    "unjudged_fields": []
+  }
+]
