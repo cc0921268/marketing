@@ -1,0 +1,8 @@
+# AI Marketing OS · requirements (v0.1)
+# Python >= 3.9
+# 说明：实验1 不引入任何大模型 SDK；后续实验（v0.4 起）再按需追加 openai 等依赖。
+
+streamlit==1.39.0
+pandas==2.2.3
+numpy==1.26.4
+matplotlib==3.9.2
