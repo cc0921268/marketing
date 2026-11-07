@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-11-07T11:30:48",
+  "raw_rows": 300,
+  "clean_rows": 282,
+  "rows_dropped_total": 18,
+  "actions": {
+    "C1_brand_alias_normalized": 243,
+    "C1_brand_unknown_kept": 0,
+    "C2_full_duplicates_removed": 9,
+    "C3_id_duplicates_removed": 9,
+    "C4_dates_normalized": 184,
+    "C4_dates_invalid_set_null": 2,
+    "C5_prices_parsed": 201,
+    "C5_prices_invalid_set_null": 0,
+    "C6_prices_clipped": 2,
+    "C7_rows_dropped": 0,
+    "C7_interaction_filled_zero": 14,
+    "C8_noise_marked": 15,
+    "C9_text_normalized": 36,
+    "C10_rating_converted": 8,
+    "C10_rating_clipped": 0,
+    "C10_product_brand_inconsistent": 7
+  },
+  "completeness_pct": {
+    "review_id": 100.0,
+    "brand": 100.0,
+    "product": 100.0,
+    "price": 95.39,
+    "rating": 90.07,
+    "review_text": 100.0,
+    "date": 99.29,
+    "interaction_count": 100.0
+  },
+  "overall_completeness_pct": 97.82,
+  "pass_90pct_target": true,
+  "brands_after_normalize": [
+    "Apple",
+    "OPPO",
+    "华为",
+    "小米",
+    "漫步者",
+    "索尼"
+  ],
+  "n_brands": 6,
+  "date_range": [
+    "2024-01-01",
+    "2024-06-28"
+  ],
+  "valid_reviews": 267,
+  "invalid_reviews": 15,
+  "consistent_records": 275,
+  "inconsistent_records": 7
+}

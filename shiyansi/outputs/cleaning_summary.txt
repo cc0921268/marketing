@@ -1,0 +1,34 @@
+清洗摘要（2026-11-07T11:30:48）
+原始 300 行 -> 清洗后 282 行（剔除 18 行）
+整体字段完整率：97.82%（达标线 90%：✅ 达标）
+品牌收敛至 6 个：Apple、OPPO、华为、小米、漫步者、索尼
+有效评论 267 条 / 无效（已打标未删） 15 条
+品类一致 275 条 / 待复核 7 条
+
+各规则命中次数：
+  C1_brand_alias_normalized: 243
+  C1_brand_unknown_kept: 0
+  C2_full_duplicates_removed: 9
+  C3_id_duplicates_removed: 9
+  C4_dates_normalized: 184
+  C4_dates_invalid_set_null: 2
+  C5_prices_parsed: 201
+  C5_prices_invalid_set_null: 0
+  C6_prices_clipped: 2
+  C7_rows_dropped: 0
+  C7_interaction_filled_zero: 14
+  C8_noise_marked: 15
+  C9_text_normalized: 36
+  C10_rating_converted: 8
+  C10_rating_clipped: 0
+  C10_product_brand_inconsistent: 7
+
+字段完整率：
+  review_id: 100.0%
+  brand: 100.0%
+  product: 100.0%
+  price: 95.39%
+  rating: 90.07%
+  review_text: 100.0%
+  date: 99.29%
+  interaction_count: 100.0%

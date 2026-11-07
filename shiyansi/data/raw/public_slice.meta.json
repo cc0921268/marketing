@@ -1,0 +1,21 @@
+{
+  "dataset_id": "gyoungjr/amazon-electronics-reviews",
+  "dataset_url": "https://huggingface.co/datasets/gyoungjr/amazon-electronics-reviews",
+  "api": "https://datasets-server.huggingface.co/rows",
+  "config": "default",
+  "split": "train",
+  "rows": 60,
+  "fields_mapped": {
+    "text": "review_text（截断 200 字）",
+    "labels": "rating（0/1/2 → 3.0/4.0/5.0，粗粒度映射）",
+    "—": "price/date/interaction_count 数据集缺失，一律留空，交 C7 处理"
+  },
+  "license_note": "HuggingFace 公开数据集，经 datasets-server 只读 API 访问；原始数据为 Amazon Electronics 评论的公开研究用抽样。本项目仅用于课程教学，不进行再分发，且只保留文本片段用于字段映射演示。",
+  "compliance": [
+    "只访问公开只读 API，无需登录、无 token",
+    "不绕过验证码 / 付费墙 / 访问限制",
+    "不采集个人信息（数据集仅含 text + label）",
+    "只保留文本片段（≤200 字），不整段转载"
+  ],
+  "note": "本文件为审计留档，随仓库提交；public_slice.csv 为可复现的派生切片。"
+}
